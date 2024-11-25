@@ -1,0 +1,329 @@
+/* --------------------
+   Estilo General
+-------------------- */
+html, body {
+    height: 100%; /* Asegura que ocupen toda la pantalla */
+    margin: 0; /* Elimina márgenes predeterminados */
+    font-family: 'Parkinsans', sans-serif;
+    line-height: 1.6; /* Espaciado entre lineas */
+    background-color: #f4f4f4; /* Color fondo */
+    color: #333; /* Color texto */
+}
+
+/* --------------------
+   Cabecera
+-------------------- */
+header {
+    background-image: url('Imagenes/Fondo_Header.jpg'); /* Fondo de la cabecera/header*/
+    background-size: cover; /* Fondo cubre completo */
+    background-position: center; /* Fondo centrado */
+    background-repeat: no-repeat;  /* Fondo no se repite */
+    padding: 1rem 0; /* Espaciado en base a una fuente*/
+    text-align: center; /* texto alineado en el centro */
+    align-items: center; /* Logo centrado */
+}
+
+
+/* Logo */
+.logo-container .logo {
+    width: 80px; /* Ajuste de anchura */
+    height: auto; /* Ajuste de altura en relación de aspecto */
+    border-radius: 20%; /* Redondeado de puntas */
+    box-shadow: 0 6px 9px rgba(0, 0, 0, 0.484); /* Sombra del logo*/
+}
+
+/* Titulo */
+
+header h1 {
+    font-size: 50px; /* Tamaño del titulo del header/cabecera */
+    font-family: 'Bungee Spice', cursive; /* Cambio fuente del titulo */
+    background-color: #00000083; /* Color de fondo con ajuste de opacidad */
+    padding: 5px 20px; /* ajusta limite del titulo */
+    border-radius: 5px; /* redondeado de puntas */
+}
+
+
+
+
+/* Botones de navegación */
+
+nav {
+    display: flex; /* Activa Flexbox para organizar los elementos dentro de nav */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    margin-top: 20px; /* Añade un espacio superior entre el nav y otros elementos */
+}
+
+nav ul {
+    list-style: none; /* Elimina los puntos de la lista */
+    display: flex; /* Organiza los elementos de la lista en una fila */
+    gap: 15px; /* Espaciado horizontal entre los elementos de la lista */
+    margin: 0; /* Elimina el margen de la lista */
+}
+
+nav ul li a {
+    background-color: rgba(0, 0, 0, 0.7); /* Establece un fondo para los botones con trnasparencia*/
+    color: white; /* El texto de los botones en blanco */
+    padding: 10px 15px; /* Margen entre el texto y el boton*/
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    border-radius: 5px; /* Bordes redondeados de 5px */
+    transition: background-color 0.3s ease; /* Suaviza el cambio de color del fondo al pasar el puntero*/
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.374); /* sombra del boton */
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 165, 0, 0.9); /* Cambia el fondo a un color naranja al pasar el ratón */
+    color: black; /* Cambia el color del texto a negro al hacer hover */
+}
+
+/* --------------------
+   Cuerpo Principal
+-------------------- */
+main {
+    display: flex; /* Activa Flexbox para organizar los elementos dentro */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten a la siguiente línea si no entran */
+    gap: 20px; /*  20px entre los elementos */
+}
+
+/* Contiene dentro en home los articulos y contiene en lap agina de lectura del articulo la informacion */
+
+.seccion {
+    background: #fff; /* Establece el fondo blanco  */
+    margin: 20px auto; /* Aplica un margen vertical y centra el artículo horizontalmente */
+    max-width: 750px; /* Limita el ancho máximo del artículo a 750px */
+    border-radius: 5px; /* Redondea las esquinas del contenedor con un radio de 5px */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Aplica una sombra alrededor del artículo */
+    padding: 10px; /* Añade un espaciado interno de 10px */
+}
+
+.seccion h2 {
+    margin-top: 0; /* Elimina el margen superior del encabezado */
+    text-align: center; /* Centra el texto del encabezado horizontalmente */
+}
+
+/* Imagen de seccion e imagen de articulo de lectura  */
+.seccion img {
+    width: 100%; /* Hace que las imágenes ocupen todo el ancho del contenedor */
+    height: 400px; /* Ajusta la altura  manteniendo la proporción de la imagen */
+    object-fit: cover; /* Recorta las imagenes para cubrir */
+    border: 2px solid #ccc; /* Añade un borde de 2px de contorno */
+    border-radius: 5px; /* Redondea las esquinas */
+}
+
+/* Artículo pie del articulo*/
+.articulo-autor {
+    font-size: 12px; /*  tamaño de fuente  */
+    color: #555; /*  color fuente */
+    margin-bottom: 10px; /* Añade un espacio inferior separa del articulo*/
+    font-style: italic; /* cursiva */
+}
+
+
+/* Entradas hacia un post concreto*/
+.entrada {
+    display: flex; /* Activa Flexbox para organizar foto con texto  */
+    gap: 20px; /* espacio  20px entre la imagen y el texto */
+    margin-bottom: 20px; /* Añade un espacio inferior entre cada entrada */
+    padding: 10px; /* bordes a 10 px */
+    border: 1px solid #ddd; /* contorno de la entrada */
+    border-radius: 5px; /* Redondea bordes de la entrada al articulo */
+    background-color: #f9f9f9; /*  fondo gris claro entrada */
+}
+
+/*  imagen de la entrada al articulo  */
+.entrada img {
+    width: 200px; /*  ancho fijo  */
+    height: 150px; /*altura fija */
+    object-fit: cover; /* Recorta sin deformar */
+    border-radius: 5px; /* Redondea  */
+}
+
+/* Titulo y descripcion de entrada a articulo */
+.entrada .texto {
+    flex: 1; /* Permite que el texto ocupe todo el espacio restante disponible */
+}
+/* Titulo y enlace */
+.entrada h3 a {
+    color: #000; /* Establece el color */
+    text-decoration: none; /* Quita el subrayado  */
+    font-size: 20px; /* tamaño */
+    margin: 0; /* quitamos margen */
+}
+
+.entrada p {
+    font-size: 16px; /* tamaño de fuente */
+    text-align: justify; /* Justifica el texto  */
+}
+
+/* --------------------
+   Formulario de Contacto
+-------------------- */
+
+#seccionContacto {
+    background-color: #f9f9f9; /* Fondo gris claro */
+    width: 600px; /* Ancho fijo de la sección */
+    margin: 0 auto; /* Centra horizontalmente el contenedor */
+    padding: 20px; /* Añade un poco de espacio interno alrededor del contenido */
+}
+
+
+/* contenedor formulario*/
+.contenedorContacto{
+    width: 100%; /* todo el ancho disponible */
+    background-color: #fff; /* Establece un fondo blanco */
+    padding: 20px; /* Añade un espaciado interno  */
+    border-radius: 8px; /* Redondea */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /*  sombra */
+    text-align: left; /* Alinea el texto a la izquierda */
+}
+
+#seccionContacto  h2 {
+    font-size: 32px; /* tamaño grande titulo */
+    color: #333; /* color textoo */
+    margin-bottom: 10px; /* espacio debajo del titulo */
+}
+
+/*  texto previo al formularoo */
+#seccionContacto  p {
+    color: #555; /* color claro al texto*/
+    margin-bottom: 20px; /* espacio debajo del parrafo*/
+    font-size: 16px; /*  tamaño estándar de texto */
+}
+
+/*   formulario */
+formulario {
+    background-color: #fff; /* color fondo formulario */
+    padding: 20px; /* espaciado del contenido */
+    border-radius: 8px; /* Redondea */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* sombra  */
+}
+
+/* campos de entrad */
+input, textarea {
+    width: 100%; /* 100% del ancho disponible */
+    padding: 10px; /* espacio interno */
+    border: 1px solid #ddd; /*  borde fino */
+    border-radius: 5px; /* Redondea las esquinas */
+    font-size: 16px; 
+}
+
+input:focus, textarea:focus {
+    border-color: #d9534f; /*borde se cambia al pincha para escribir */
+    outline: none; /* Elimina el contorno predeterminado  */
+}
+
+.boton {
+    background-color: #d9534f; /*fondo rojo */
+    color: #fff; /* texto del botón a blanco */
+    padding: 10px 20px; /*  espacio interno  */
+    border: none; /* Elimina cualquier borde del botón */
+    border-radius: 5px; /* Redondea las esquinas del botón */
+    font-size: 16px; /* tamaño texto*/
+    cursor: pointer; /* cursor a dedo  */
+    transition: background-color 0.3s; /* Suaviza la transición de color */
+}
+
+.boton:hover {
+    background-color: #c9302c; /* Cambia el fondo de color mas oscuro*/
+}
+
+
+/* --------------------
+   Pie de Página
+-------------------- */
+footer {
+    text-align: center; /* Centra el contenido dentro del footer */
+    background-color: #333; /*  fondo oscuro */
+    color: white; /*  texto del footer a blanco */
+    padding: 20px 0; /* espacio interno vertical  */
+}
+
+footer p {
+    font-size: 14px; /* tamaño de texto pequeño para el contenido del footer */
+}
+
+.footer-links {
+    margin-top: 15px; /* Añade un espacio superior entre los enlaces y otros elementos del footer */
+    text-align: center; /* Centra los enlaces horizontalmente */
+}
+
+.footer-links .contact-link {
+    font-size: 16px; /*  tamaño de texto estándar  */
+    text-decoration: none; /* Elimina el subrayado */
+    color: #d9534f; /*  color rojo dpara el enlace */
+    transition: color 0.3s ease; /* Suaviza el cambio */
+}
+
+.footer-links .contact-link:hover {
+    color: #c9302c; /*  rojo más oscuro al pasar el ratón */
+    font-weight: bold; /*  texto del enlace más grueso  */
+}
+
+.social-media {
+    margin-top: 20px; /* Añade un espacio superior  */
+}
+
+.social-icons {
+    display: flex; /* Activa Flexbox para organizar los íconos de redes sociales en una fila */
+    justify-content: center; /* Centra los íconos horizontalmente */
+    gap: 15px; /* Añade un espacio de 15px entre cada ícono */
+}
+
+.social-icons a {
+    display: inline-block; /*  enlaces de las redes sociales en línea */
+    width: 40px; /*  ancho fijo  para cada ícono */
+    height: 40px; /*  altura fija para cada ícono */
+    transition: transform 0.3s; /*  transición suave */
+}
+
+.social-icons img {
+    width: 100%; /*  las imágenes ocupen todo el ancho del contenedor ( */
+    height: auto; /* Ajusta la altura proporcionalmente */
+    border-radius: 50%; /* Redondea las imágenes --> círculos */
+}
+
+.social-icons a:hover {
+    transform: scale(1.2); /* Aumenta el tamaño del ícono al pasar raton */
+}
+
+.articuloRelacionado {
+    flex: 1; /* El artículo relacionado ocupará 1 parte del espacio */
+    max-width: 25%; /* 30% del contenedor */
+    background-color: #f9f9f9; /* Fondo claro */
+    border: 1px solid #ddd; /* Borde gris claro */
+    border-radius: 8px; /* Esquinas redondeadas */
+    padding: 15px; /* Espaciado interno */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    margin-top: 100px;  /* Separar del header */
+    margin-bottom: 1100px;  /* Separar del header */
+}
+
+.articuloRelacionado h2 {
+    font-size: 20px; /* Tamaño del título */
+    margin-bottom: 10px; /* Espaciado inferior */
+    color: #333; /* Color gris oscuro */
+}
+
+.articuloRelacionado img {
+    width: 100%; /* Ancho completo */
+    height: auto; /* proporciones de la imagen */
+    border-radius: 5px; /* Redondea las esquinas */
+    margin-bottom: 10px; /* Espaciado inferior */
+}
+
+.articuloRelacionado p {
+    font-size: 16px; /* Tamaño del texto */
+    margin-bottom: 10px; /* Espaciado inferior */
+    color: #555; /* Color gris suave */
+}
+
+.articuloRelacionado .leerMas {
+    display: inline-block; /* Muestra el enlace como un botón */
+    text-decoration: none; /* Elimina el subrayado */
+    color: #d9534f; /* Color rojo deportivo */
+    font-weight: bold; /* Hace el texto más grueso */
+    transition: color 0.3s ease; /* Suaviza el cambio de color */
+}
+
+.articuloRelacionado .leerMas:hover {
+    color: #c9302c; /* Cambia a un rojo más oscuro al pasar el ratón */
+}
